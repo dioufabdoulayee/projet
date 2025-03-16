@@ -1,0 +1,17 @@
+CREATE TABLE clients (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(200) NOT NULL UNIQUE,
+    phone VARCHAR(20) NULL,
+    address VARCHAR(200) NULL,
+    password VARCHAR(32) NULL,  
+    profile_picture VARCHAR(255) NULL, 
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO clients (name, email, phone, address) 
+VALUES 
+    ('Cheikh Tidiane Diop', 'cheikh.diop@gmail.com', '774394920', 'Dakar, SN'),
+    ('Abdoulaye Diouf', 'abdoulaye.diouf@gmail.com', '778975432', 'Dakar, SN'),
+    ('Nom2', 'nom2@gmail.com', '775645321', 'Dakar, SN'),
+    ('Nom3', 'nom3@gmail.com', '787654561', 'Dakar, SN');
